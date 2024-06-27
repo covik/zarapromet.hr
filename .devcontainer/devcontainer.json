@@ -1,0 +1,9 @@
+{
+    "build": {
+        "dockerfile": "../Dockerfile",
+        "stage": "dev"
+    },
+    "postCreateCommand": "yarn install --frozen-lockfile",
+    "postStartCommand": "yarn dev > /dev/null 2>&1 &",
+    "appPort": [8080]
+}

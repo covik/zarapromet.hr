@@ -4,7 +4,6 @@
     <ports>
       <entry key="8080">
         <ForwardedPortInfo>
-          <option name="port" value="8080" />
           <option name="readOnly" value="false" />
         </ForwardedPortInfo>
       </entry>

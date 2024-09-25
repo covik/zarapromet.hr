@@ -24,7 +24,6 @@
         "@emotion/react": "^11.13.3",
         "@emotion/styled": "^11.13.0",
         "@fontsource/montserrat": "^5.1.0",
-        "@types/node": "^22.5.4",
         "normalize.css": "^8.0.1",
         "react": "^18.3.1",
         "react-dom": "^18.3.1"
@@ -40,6 +39,7 @@
         "@storybook/react": "^8.2.9",
         "@storybook/react-vite": "^8.2.9",
         "@storybook/test": "^8.2.9",
+        "@types/node": "^22.5.4",
         "@types/react": "^18.3.3",
         "@types/react-dom": "^18.3.0",
         "@typescript-eslint/utils": "^8.4.0",

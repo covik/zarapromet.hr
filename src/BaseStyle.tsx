@@ -10,30 +10,23 @@ const variables = {
     background: {
         primary: '--primary-bg',
         secondary: '--secondary-bg',
-        card: '--card-bg',
     },
     text: {
         primary: '--primary-text',
         secondary: '--secondary-text',
-        muted: '--muted-text',
     },
-    accent: '--accent',
-    borderColor: '--border-color',
 };
 
 const theme: Theme = {
     background: {
         primary: `var(${variables.background.primary})`,
         secondary: `var(${variables.background.secondary})`,
-        card: `var(${variables.background.card})`,
     },
     text: {
         primary: `var(${variables.text.primary})`,
         secondary: `var(${variables.text.secondary})`,
-        muted: `var(${variables.text.muted})`,
     },
-    accent: `var(${variables.accent})`,
-    borderColor: `var(${variables.borderColor})`,
+    spacing: (multiplier) => `${multiplier * 8}px`,
 };
 
 const globalStyles = {
@@ -41,26 +34,16 @@ const globalStyles = {
         colorScheme: 'light dark',
         [variables.background.primary]: '#F6F6F6',
         [variables.background.secondary]: '#111111',
-        [variables.background.card]: '#FFFFFF',
 
         [variables.text.primary]: '#2F2F2F',
-        [variables.text.secondary]: '#FFFFFF',
-        [variables.text.muted]: '#2F2F2F',
-
-        [variables.accent]: '#FFCB74',
-        [variables.borderColor]: '#2F2F2F',
+        [variables.text.secondary]: '#787878',
 
         '@media (prefers-color-scheme: dark)': {
             [variables.background.primary]: '#111111',
             [variables.background.secondary]: '#F6F6F6',
-            [variables.background.card]: '#2F2F2F',
 
             [variables.text.primary]: '#FFFFFF',
-            [variables.text.secondary]: '#2F2F2F',
-            [variables.text.muted]: '#F6F6F6',
-
-            [variables.accent]: '#FFCB74',
-            [variables.borderColor]: '#FFFFFF',
+            [variables.text.secondary]: '#c1c1c1',
         },
     },
 

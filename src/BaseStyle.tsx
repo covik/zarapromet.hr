@@ -1,11 +1,10 @@
 import { Global, ThemeProvider } from '@emotion/react';
 import { PropsWithChildren } from 'react';
 import 'normalize.css';
-import '@fontsource/montserrat/400.css'; // Regular weight
+import '@fontsource/montserrat/400.css';
 import '@fontsource/montserrat/700.css';
-import { Theme } from './theme'; // Bold weight
+import { Theme } from './theme';
 
-/** CSS variable names stored in a nested object */
 const variables = {
     background: {
         primary: '--primary-bg',
@@ -30,6 +29,10 @@ const theme: Theme = {
 };
 
 const globalStyles = {
+    '*, *::before, *::after': {
+        boxSizing: 'border-box',
+    },
+
     ':root': {
         colorScheme: 'light dark',
         [variables.background.primary]: '#F6F6F6',
@@ -54,7 +57,7 @@ const globalStyles = {
         fontSize: ['16px', 'clamp(12px, 1rem, 32px)'], // Follows WCAG guidelines
         lineHeight: 1.5,
     },
-};
+} as const;
 
 export function BaseStyle({ children }: PropsWithChildren) {
     return (

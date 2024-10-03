@@ -13,6 +13,6 @@ const Container = styled.iframe({
 
 export function Location() {
     return (
-        <Container src="https://www.google.com/maps/embed/v1/place?q=zara+promet&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></Container>
+        <Container src="https://www.google.com/maps/embed/v1/place?q=Zara%20Promet%2C%20Murvica&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></Container>
     );
 }

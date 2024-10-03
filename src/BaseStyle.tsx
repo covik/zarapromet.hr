@@ -57,6 +57,17 @@ const globalStyles = {
         fontSize: ['16px', 'clamp(12px, 1rem, 32px)'], // Follows WCAG guidelines
         lineHeight: 1.5,
     },
+
+    a: {
+        all: 'unset',
+        display: 'inline',
+        color: 'inherit',
+        textDecoration: 'none',
+        cursor: 'pointer',
+        userSelect: 'none',
+        fontFamily: 'inherit',
+        fontSize: 'inherit',
+    },
 } as const;
 
 export function BaseStyle({ children }: PropsWithChildren) {

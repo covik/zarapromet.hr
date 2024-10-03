@@ -28,11 +28,11 @@ const ContactRoot = styled.div(({ theme }) => ({
 }));
 
 const ContactIcon = styled.div(({ theme }) => ({
-    alignItems: 'center',
-    display: 'flex',
-    flexDirection: 'column',
+    alignSelf: 'center',
+    justifySelf: 'center',
     gridArea: 'icon',
     fill: theme.text.primary,
+    maxWidth: '96px',
 
     svg: {
         display: 'block',

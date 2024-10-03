@@ -1,8 +1,8 @@
 import styled from '@emotion/styled';
-import { EmailIcon } from './EmailIcon';
-import { PersonIcon } from './PersonIcon';
-import { PhoneIcon } from './PhoneIcon';
-import { WhatsAppLogo } from './WhatsAppLogo';
+import { EmailIcon } from './icons/EmailIcon';
+import { PersonIcon } from './icons/PersonIcon';
+import { PhoneIcon } from './icons/PhoneIcon';
+import { WhatsAppLogo } from './icons/WhatsAppLogo';
 
 const ContactRoot = styled.div(({ theme }) => ({
     backgroundColor: 'transparent',

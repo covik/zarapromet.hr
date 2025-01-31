@@ -36,13 +36,13 @@ const globalStyles = {
     ':root': {
         colorScheme: 'light dark',
         [variables.background.primary]: '#F6F6F6',
-        [variables.background.secondary]: '#111111',
+        [variables.background.secondary]: '#262626',
 
         [variables.text.primary]: '#2F2F2F',
         [variables.text.secondary]: '#787878',
 
         '@media (prefers-color-scheme: dark)': {
-            [variables.background.primary]: '#111111',
+            [variables.background.primary]: '#262626',
             [variables.background.secondary]: '#F6F6F6',
 
             [variables.text.primary]: '#FFFFFF',

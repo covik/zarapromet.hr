@@ -1,9 +1,9 @@
 import { Global, ThemeProvider } from '@emotion/react';
-import { PropsWithChildren } from 'react';
 import 'normalize.css';
 import '@fontsource/montserrat/400.css';
 import '@fontsource/montserrat/700.css';
-import { Theme } from './theme';
+import type { PropsWithChildren } from 'react';
+import type { Theme } from './theme';
 
 const variables = {
     background: {

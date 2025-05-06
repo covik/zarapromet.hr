@@ -2,7 +2,7 @@
     "name": "zarapromet.hr",
     "version": "2.0.0",
     "description": "Presentational website for road transportation company",
-    "repository": "git@github.com:sudocovik/zarapromet.hr.git",
+    "repository": "git@github.com:covik/zarapromet.hr.git",
     "author": "Mate Nakić",
     "private": true,
     "type": "module",

@@ -5,7 +5,7 @@
     },
     "postCreateCommand": "yarn install --frozen-lockfile",
     "postStartCommand": "yarn dev > /dev/null 2>&1 &",
-    "appPort": [8080, 6006],
+    "appPort": [8080, 8070, 6006],
     "mounts": [
         "source=jetbrains,target=/home/developer/.cache/JetBrains/RemoteDev/dist,type=volume",
         "source=yarn,target=/home/developer/.cache/.yarn,type=volume"

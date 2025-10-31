@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import 'normalize.css';
+import { BaseStyle } from './BaseStyle';
 import { ContactCard } from './contact';
 import { Header } from './header';
 import { Location } from './location';
@@ -43,7 +43,7 @@ const LocationContainer = styled(BaseContainer)({
 
 export function App() {
     return (
-        <>
+        <BaseStyle>
             <BaseContainer style={{ paddingTop: '128px' }}>
                 <Header />
             </BaseContainer>
@@ -86,6 +86,6 @@ export function App() {
             <LocationContainer>
                 <Location />
             </LocationContainer>
-        </>
+        </BaseStyle>
     );
 }

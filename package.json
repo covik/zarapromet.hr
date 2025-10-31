@@ -12,8 +12,8 @@
         ]
     },
     "scripts": {
-        "build": "vite build",
-        "dev": "vite",
+        "build": "vite-react-ssg build",
+        "dev": "vite dev",
         "lint": "eslint --max-warnings=0 .",
         "prepare": "husky",
         "preview": "vite preview",
@@ -44,6 +44,7 @@
         "@types/react-dom": "^18.3.0",
         "@typescript-eslint/utils": "^8.4.0",
         "@vitejs/plugin-react": "^4.3.1",
+        "beasties": "^0.3.5",
         "eslint": "^9.9.0",
         "eslint-plugin-react-hooks": "^5.1.0-rc.0",
         "eslint-plugin-react-refresh": "^0.4.9",
@@ -55,6 +56,7 @@
         "storybook": "^8.2.9",
         "typescript": "^5.5.3",
         "typescript-eslint": "^8.0.1",
-        "vite": "^5.4.1"
+        "vite": "^5.4.1",
+        "vite-react-ssg": "^0.8.9"
     }
 }

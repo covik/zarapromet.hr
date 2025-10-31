@@ -1,7 +1,7 @@
 import { Global, ThemeProvider } from '@emotion/react';
 import 'normalize.css';
-import '@fontsource/montserrat/400.css';
-import '@fontsource/montserrat/700.css';
+import '@fontsource/montserrat/latin-400.css';
+import '@fontsource/montserrat/latin-700.css';
 import type { PropsWithChildren } from 'react';
 import type { Theme } from './theme';
 

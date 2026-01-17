@@ -1,4 +1,4 @@
-FROM node:22.9.0-bookworm-slim@sha256:903eaf1ae555002624d07066b7ce506dc2fb67b6da3121255b40ff4dc8e7e1b8
+FROM node:24.13.0-trixie-slim@sha256:a16979bcaf12a2fd24888eb8e89874b11bd1038a3e3f1881c26a5e2b8fb92b5c
 RUN unlink /usr/local/bin/npm \
     && apt-get update && apt-get --no-install-recommends install -y \
         ca-certificates \

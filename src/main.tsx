@@ -1,4 +1,5 @@
+import { createRoot } from 'react-dom/client';
 import { App } from './App.tsx';
-import { ViteReactSSG } from 'vite-react-ssg/single-page';
 
-export const createRoot = ViteReactSSG(<App />);
+const root = createRoot(document.getElementById('root')!);
+root.render(<App />);

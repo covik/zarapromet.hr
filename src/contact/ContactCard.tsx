@@ -41,12 +41,8 @@ const ContactAbout = styled.div({
 });
 
 const ContactTitle = styled.div(({ theme }) => ({
-    backgroundColor: theme.background.secondary,
-    color: '#333',
-    borderRadius: '8px',
-    display: 'inline-block',
+    color: theme.text.secondary,
     lineHeight: 1,
-    padding: '4px',
 }));
 
 const ContactName = styled.h2({

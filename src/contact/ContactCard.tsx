@@ -58,7 +58,7 @@ const ContactActions = styled.div(({ theme }) => ({
 }));
 
 const ContactDescription = styled.div(({ theme }) => ({
-    fontWeight: '600',
+    color: theme.text.secondary,
     lineHeight: '1.8',
     gridArea: 'desc',
     padding: `0 ${theme.spacing(1)}`,

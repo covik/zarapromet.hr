@@ -27,14 +27,6 @@ export const ContactPhoneCall = styled(CallToAction)({
     },
 });
 
-export const ContactWhatsAppChat = styled(CallToAction)({
-    borderColor: '#4BD366',
-
-    '&:hover': {
-        backgroundColor: '#4BD366',
-    },
-});
-
 export const ContactEmail = styled(CallToAction)({
     borderColor: '#0094ff',
 

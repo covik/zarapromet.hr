@@ -2,12 +2,10 @@ import styled from '@emotion/styled';
 import {
     ContactEmail,
     ContactPhoneCall,
-    ContactWhatsAppChat,
 } from './CallToAction';
 import { EmailIcon } from './icons/EmailIcon';
 import { PersonIcon } from './icons/PersonIcon';
 import { PhoneIcon } from './icons/PhoneIcon';
-import { WhatsAppLogo } from './icons/WhatsAppLogo';
 
 const ContactRoot = styled.div(({ theme }) => ({
     backgroundColor: 'transparent',
@@ -59,13 +57,8 @@ const ContactName = styled.h2({
 
 const ContactActions = styled.div(({ theme }) => ({
     gridArea: 'action',
-    display: 'flex',
-    flexWrap: 'wrap',
+    display: 'grid',
     gap: theme.spacing(0.7),
-
-    '> *': {
-        flex: '1',
-    },
 }));
 
 const ContactDescription = styled.div(({ theme }) => ({
@@ -80,7 +73,6 @@ export interface ContactCardProps {
     fullName: string;
     email: string;
     title: string;
-    whatsAppChat?: boolean;
     cellphoneNumber?: string;
     description: string[];
 }
@@ -114,18 +106,6 @@ export function ContactCard(args: ContactCardProps) {
                     </ContactPhoneCall>
                 ) : undefined}
 
-                {args.cellphoneNumber && args.whatsAppChat ? (
-                    <ContactWhatsAppChat
-                        href={`https://wa.me/${stripNonDigits(args.cellphoneNumber)}`}
-                        target="_blank"
-                        rel="noopener noreferrer nofollow"
-                        aria-label={`Chat on WhatsApp with ${args.fullName}`}
-                    >
-                        <WhatsAppLogo />
-                        <span>Chat</span>
-                    </ContactWhatsAppChat>
-                ) : undefined}
-
                 <ContactEmail
                     href={`mailto:${args.email}`}
                     aria-label={`Email conversation with ${args.fullName} at ${args.email}`}
@@ -136,8 +116,4 @@ export function ContactCard(args: ContactCardProps) {
             </ContactActions>
         </ContactRoot>
     );
-}
-
-function stripNonDigits(input: string): string {
-    return input.replace(/\D/g, ''); // \D matches any non-digit character
 }

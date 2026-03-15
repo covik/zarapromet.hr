@@ -54,7 +54,6 @@ export function App() {
                     email={'info@zarapromet.hr'}
                     title={'CEO'}
                     cellphoneNumber={'+385915887191'}
-                    whatsAppChat
                     description={[
                         'Transport inquiries',
                         'Emergencies',

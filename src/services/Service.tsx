@@ -7,16 +7,9 @@ export const Service = styled.div(({ theme }) => ({
     display: 'flex',
     flexDirection: 'column',
     padding: theme.spacing(3),
-    transition: 'background-color 300ms',
-    '&:hover': {
-        backgroundColor: '#0001',
-    },
 
     '@media (prefers-color-scheme: dark)': {
         boxShadow: '0 0 3px #FFFC',
-        '&:hover': {
-            backgroundColor: '#FFF1',
-        },
     },
 }));
 

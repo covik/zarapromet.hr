@@ -19,16 +19,9 @@ const ContactRoot = styled.div(({ theme }) => ({
     gridTemplateAreas: ['"icon about" "desc desc" "action action"'],
     gap: '16px',
     padding: theme.spacing(3),
-    transition: 'background-color 300ms',
-    '&:hover': {
-        backgroundColor: '#0001',
-    },
 
     '@media (prefers-color-scheme: dark)': {
         boxShadow: '0 0 3px #FFFC',
-        '&:hover': {
-            backgroundColor: '#FFF1',
-        },
     },
 }));
 

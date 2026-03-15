@@ -66,8 +66,8 @@ export function App() {
                     email={'it@zarapromet.hr'}
                     title={'CIO'}
                     description={[
-                        'Communication problems',
                         'Third-party integrations',
+                        'Communication support',
                         'Device and account management',
                     ]}
                 />

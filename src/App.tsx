@@ -34,11 +34,8 @@ const ContactContainer = styled(BaseContainer)(({ theme }) => ({
 }));
 
 const LocationContainer = styled(BaseContainer)({
-    maxWidth: '100%',
     height: '50vmax',
     width: '100%',
-    paddingLeft: 0,
-    paddingRight: 0,
 });
 
 export function App() {

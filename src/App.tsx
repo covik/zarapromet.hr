@@ -3,7 +3,6 @@ import { BaseStyle } from './BaseStyle';
 import { ContactCard } from './contact';
 import { Header } from './header';
 import { Location } from './location';
-import { Resources } from './resources';
 import { Services } from './services';
 
 const BaseContainer = styled.section({
@@ -47,10 +46,6 @@ export function App() {
 
             <ServicesContainer>
                 <Services />
-            </ServicesContainer>
-
-            <ServicesContainer>
-                <Resources />
             </ServicesContainer>
 
             <ContactContainer>

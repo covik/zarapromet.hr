@@ -56,9 +56,8 @@ export function App() {
                     cellphoneNumber={'+385915887191'}
                     description={[
                         'Transport inquiries',
-                        'Emergencies',
-                        'Invoice issues',
-                        'Regulations and compliance',
+                        'Invoicing and payments',
+                        'Regulation and compliance',
                     ]}
                 />
 

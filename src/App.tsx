@@ -1,8 +1,8 @@
 import styled from '@emotion/styled';
 import { BaseStyle } from './BaseStyle';
 import { ContactCard } from './contact';
-import { Header } from './header';
-import { Location } from './location';
+import { Header } from './Header';
+import { Location } from './Location';
 import { Services } from './services';
 import * as css from './css';
 

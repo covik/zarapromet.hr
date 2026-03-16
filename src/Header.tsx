@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
-import * as css from '../css';
-import { Logo } from '../logo';
+import * as css from './css';
+import { Logo } from './Logo';
 
 const Container = styled.header({
     display: 'flex',

@@ -1,5 +1,5 @@
-import { useTheme } from '@emotion/react';
 import styled from '@emotion/styled';
+import * as css from '../css';
 import { Logo } from '../logo';
 
 const Container = styled.header({
@@ -14,11 +14,9 @@ const Container = styled.header({
 });
 
 export function Header() {
-    const theme = useTheme();
-
     return (
         <Container>
-            <Logo textColor={theme.text.primary} />
+            <Logo textColor={`var(${css.variables.text.primary})`} />
         </Container>
     );
 }

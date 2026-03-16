@@ -1,46 +1,47 @@
 import styled from '@emotion/styled';
+import * as css from '../css';
 import { ContactEmail, ContactPhoneCall } from './CallToAction';
 import { EmailIcon } from './icons/EmailIcon';
 import { PersonIcon } from './icons/PersonIcon';
 import { PhoneIcon } from './icons/PhoneIcon';
 
-const ContactRoot = styled.div(({ theme }) => ({
+const ContactRoot = styled.div({
     backgroundColor: 'transparent',
-    borderRadius: theme.spacing(2),
+    borderRadius: css.spacing(2),
     boxShadow: '0 0 3px #000C',
     display: 'grid',
     gridTemplateColumns: '1fr 3fr',
     gridTemplateRows: 'auto 1fr auto',
     gridTemplateAreas: ['"icon about" "desc desc" "action action"'],
-    gap: '16px',
-    padding: theme.spacing(3),
+    gap: css.spacing(2),
+    padding: css.spacing(3),
 
     '@media (prefers-color-scheme: dark)': {
         boxShadow: '0 0 3px #FFFC',
     },
-}));
+});
 
-const ContactIcon = styled.div(({ theme }) => ({
+const ContactIcon = styled.div({
     alignSelf: 'center',
     justifySelf: 'center',
     gridArea: 'icon',
-    fill: theme.text.primary,
+    fill: `var(${css.variables.text.secondary})`,
     maxWidth: '96px',
 
     svg: {
         display: 'block',
         width: '100%',
     },
-}));
+});
 
 const ContactAbout = styled.div({
     gridArea: 'about',
 });
 
-const ContactTitle = styled.div(({ theme }) => ({
-    color: theme.text.secondary,
+const ContactTitle = styled.div({
+    color: `var(${css.variables.text.secondary})`,
     lineHeight: 1,
-}));
+});
 
 const ContactName = styled.h2({
     fontSize: '1.5em',
@@ -48,19 +49,19 @@ const ContactName = styled.h2({
     margin: 0,
 });
 
-const ContactActions = styled.div(({ theme }) => ({
+const ContactActions = styled.div({
     gridArea: 'action',
     display: 'grid',
-    gap: theme.spacing(0.7),
-}));
+    gap: css.spacing(0.7),
+});
 
-const ContactDescription = styled.div(({ theme }) => ({
-    color: theme.text.secondary,
+const ContactDescription = styled.div({
+    color: `var(${css.variables.text.secondary})`,
     lineHeight: '1.8',
     gridArea: 'desc',
-    padding: `0 ${theme.spacing(1)}`,
+    padding: `0 ${css.spacing(1)}`,
     marginBottom: '1em',
-}));
+});
 
 export interface ContactCardProps {
     fullName: string;

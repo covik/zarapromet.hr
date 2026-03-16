@@ -1,15 +1,16 @@
 import styled from '@emotion/styled';
+import * as css from '../css'
 
-const Container = styled.div(({ theme }) => ({
+const Container = styled.div({
     boxShadow: '0 0 3px #0001',
-    borderRadius: theme.spacing(2),
+    borderRadius: css.spacing(2),
     height: '100%',
     overflow: 'hidden',
 
     '@media (prefers-color-scheme: dark)': {
         boxShadow: '0 0 3px #FFFC',
     },
-}));
+});
 
 const Iframe = styled.iframe({
     border: 0,

@@ -4,6 +4,7 @@ import { ContactCard } from './contact';
 import { Header } from './header';
 import { Location } from './location';
 import { Services } from './services';
+import * as css from './css';
 
 const BaseContainer = styled.section({
     maxWidth: '1280px',
@@ -11,26 +12,26 @@ const BaseContainer = styled.section({
     padding: '64px 32px',
 });
 
-const ServicesContainer = styled(BaseContainer)(({ theme }) => ({
+const ServicesContainer = styled(BaseContainer)({
     display: 'grid',
     gridTemplateColumns: '1fr',
-    gap: theme.spacing(4),
+    gap: css.spacing(4),
     '@media (min-width: 600px)': {
         gridTemplateColumns: 'repeat(2, 1fr)',
     },
     '@media (min-width: 1200px)': {
         gridTemplateColumns: 'repeat(4, 1fr)',
     },
-}));
+});
 
-const ContactContainer = styled(BaseContainer)(({ theme }) => ({
+const ContactContainer = styled(BaseContainer)({
     display: 'grid',
     gridTemplateColumns: '1fr',
-    gap: theme.spacing(4),
+    gap: css.spacing(4),
     '@media (min-width: 768px)': {
         gridTemplateColumns: 'repeat(2, 1fr)',
     },
-}));
+});
 
 const LocationContainer = styled(BaseContainer)({
     height: '50vmax',
@@ -39,8 +40,9 @@ const LocationContainer = styled(BaseContainer)({
 
 export function App() {
     return (
-        <BaseStyle>
-            <BaseContainer style={{ paddingTop: '128px' }}>
+        <>
+            <BaseStyle />
+            <BaseContainer style={{ paddingTop: css.spacing(16) }}>
                 <Header />
             </BaseContainer>
 
@@ -76,6 +78,6 @@ export function App() {
             <LocationContainer>
                 <Location />
             </LocationContainer>
-        </BaseStyle>
+        </>
     );
 }

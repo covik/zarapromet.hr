@@ -1,31 +1,32 @@
 import styled from '@emotion/styled';
+import * as css from '../css'
 
-export const Service = styled.div(({ theme }) => ({
+export const Service = styled.div({
     backgroundColor: 'transparent',
     boxShadow: '0 0 3px #000C',
-    borderRadius: theme.spacing(2),
+    borderRadius: css.spacing(2),
     display: 'flex',
     flexDirection: 'column',
-    padding: theme.spacing(3),
+    padding: css.spacing(3),
 
     '@media (prefers-color-scheme: dark)': {
         boxShadow: '0 0 3px #FFFC',
     },
-}));
+});
 
-export const ServiceName = styled.h2(({ theme }) => ({
-    color: theme.text.primary,
+export const ServiceName = styled.h2({
+    color: `var(${css.variables.text.primary})`,
     fontWeight: 600,
-    margin: `${theme.spacing(3)} 0 ${theme.spacing(1)}`,
-}));
+    margin: `${css.spacing(3)} 0 ${css.spacing(1)}`,
+});
 
-export const ServiceDescription = styled.div(({ theme }) => ({
-    color: theme.text.secondary,
-}));
+export const ServiceDescription = styled.div({
+    color: `var(${css.variables.text.secondary})`,
+});
 
-export const ServiceIcon = styled.div(({ theme }) => ({
+export const ServiceIcon = styled.div({
     alignSelf: 'center',
-    fill: theme.text.primary,
-    stroke: theme.text.primary,
+    fill: `var(${css.variables.text.primary})`,
+    stroke: `var(${css.variables.text.primary})`,
     width: '72px',
-}));
+});

@@ -7,7 +7,7 @@ const Container = styled.div(({ theme }) => ({
     overflow: 'hidden',
 
     '@media (prefers-color-scheme: dark)': {
-        boxShadow: '0 0 3px #FFFC'
+        boxShadow: '0 0 3px #FFFC',
     },
 }));
 

@@ -1,8 +1,5 @@
 import styled from '@emotion/styled';
-import {
-    ContactEmail,
-    ContactPhoneCall,
-} from './CallToAction';
+import { ContactEmail, ContactPhoneCall } from './CallToAction';
 import { EmailIcon } from './icons/EmailIcon';
 import { PersonIcon } from './icons/PersonIcon';
 import { PhoneIcon } from './icons/PhoneIcon';

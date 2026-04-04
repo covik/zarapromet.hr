@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { BaseStyle } from './BaseStyle';
-import { ContactAbout, ContactActions, ContactCard, ContactDescription, ContactIcon, ContactName, ContactTitle } from './contact';
+import { ContactAbout, ContactActions, ContactCard, ContactDescription, ContactAvatar, ContactName, ContactTitle } from './contact';
 import { Header } from './Header';
 import { Location } from './Location';
 import { Services } from './services';
@@ -8,7 +8,7 @@ import * as css from './css';
 import { ContactEmail, ContactPhoneCall } from './contact/CallToAction';
 import { PhoneIcon } from './contact/icons/PhoneIcon';
 import { EmailIcon } from './contact/icons/EmailIcon';
-import { PersonIcon } from './contact/icons/PersonIcon';
+import anteNakicFaceUrl from './assets/ante-nakic.png';
 
 const BaseContainer = styled.section({
     maxWidth: '1280px',
@@ -56,9 +56,9 @@ export function App() {
 
             <ContactContainer>
                 <ContactCard>
-                    <ContactIcon>
-                        <PersonIcon />
-                    </ContactIcon>
+                    <ContactAvatar>
+                        <img src={anteNakicFaceUrl} alt={'Ante Nakić Face'} />
+                    </ContactAvatar>
 
                     <ContactAbout>
                         <ContactName>Ante Nakić</ContactName>

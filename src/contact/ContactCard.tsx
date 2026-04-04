@@ -6,7 +6,7 @@ export const ContactCard = styled.div({
     borderRadius: css.spacing(2),
     boxShadow: '0 0 3px #000C',
     display: 'grid',
-    gridTemplateColumns: '1fr 3fr',
+    gridTemplateColumns: 'min-content',
     gridTemplateRows: 'auto 1fr auto',
     gridTemplateAreas: ['"icon about" "desc desc" "action action"'],
     gap: css.spacing(2),
@@ -17,16 +17,17 @@ export const ContactCard = styled.div({
     },
 });
 
-export const ContactIcon = styled.div({
+export const ContactAvatar = styled.div({
     alignSelf: 'center',
     justifySelf: 'center',
     gridArea: 'icon',
     fill: `var(${css.variables.text.secondary})`,
     maxWidth: '96px',
 
-    svg: {
+    img: {
+        borderRadius: css.spacing(2),
         display: 'block',
-        width: '100%',
+        width: '64px',
     },
 });
 
@@ -55,6 +56,5 @@ export const ContactDescription = styled.div({
     color: `var(${css.variables.text.secondary})`,
     lineHeight: '1.8',
     gridArea: 'desc',
-    padding: `0 ${css.spacing(1)}`,
     marginBottom: '1em',
 });

@@ -2,8 +2,6 @@ import styled from '@emotion/styled';
 import * as css from '../css';
 
 const CallToAction = styled.a({
-    borderWidth: '2px',
-    borderStyle: 'solid',
     color: '#fff',
     fill: '#fff',
     fontSize: '16px',

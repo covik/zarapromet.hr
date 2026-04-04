@@ -4,7 +4,8 @@ import * as css from '../css';
 export const ContactCard = styled.div({
     backgroundColor: 'transparent',
     borderRadius: css.spacing(2),
-    boxShadow: '0 0 3px #000C',
+    border: '1px solid rgba(0, 0, 0, 0.1)',
+    boxShadow: '0 0 12px rgba(0, 0, 0, 0.06)',
     display: 'grid',
     gridTemplateColumns: 'min-content',
     gridTemplateRows: 'auto 1fr auto',
@@ -13,7 +14,8 @@ export const ContactCard = styled.div({
     padding: css.spacing(3),
 
     '@media (prefers-color-scheme: dark)': {
-        boxShadow: '0 0 3px #FFFC',
+        border: '1px solid rgba(255, 255, 255, 0.1)',
+        boxShadow: '0 0 12px rgba(255, 255, 255, 0.06)',
     },
 });
 

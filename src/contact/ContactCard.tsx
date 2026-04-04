@@ -48,6 +48,7 @@ export const ContactName = styled.h2({
 
 export const ContactActions = styled.div({
     gridArea: 'action',
+    gridTemplateColumns: '1fr 1fr',
     display: 'grid',
     gap: css.spacing(0.7),
 });

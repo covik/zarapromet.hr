@@ -62,17 +62,6 @@ export function App() {
                         'Regulation and compliance',
                     ]}
                 />
-
-                <ContactCard
-                    fullName={'Mate Nakić'}
-                    email={'it@zarapromet.hr'}
-                    title={'CIO'}
-                    description={[
-                        'Third-party integrations',
-                        'Communication support',
-                        'Device and account management',
-                    ]}
-                />
             </ContactContainer>
 
             <LocationContainer>

@@ -1,11 +1,7 @@
 import styled from '@emotion/styled';
 import * as css from '../css';
-import { ContactEmail, ContactPhoneCall } from './CallToAction';
-import { EmailIcon } from './icons/EmailIcon';
-import { PersonIcon } from './icons/PersonIcon';
-import { PhoneIcon } from './icons/PhoneIcon';
 
-const ContactRoot = styled.div({
+export const ContactCard = styled.div({
     backgroundColor: 'transparent',
     borderRadius: css.spacing(2),
     boxShadow: '0 0 3px #000C',
@@ -21,7 +17,7 @@ const ContactRoot = styled.div({
     },
 });
 
-const ContactIcon = styled.div({
+export const ContactIcon = styled.div({
     alignSelf: 'center',
     justifySelf: 'center',
     gridArea: 'icon',
@@ -34,80 +30,31 @@ const ContactIcon = styled.div({
     },
 });
 
-const ContactAbout = styled.div({
+export const ContactAbout = styled.div({
     gridArea: 'about',
 });
 
-const ContactTitle = styled.div({
+export const ContactTitle = styled.div({
     color: `var(${css.variables.text.secondary})`,
     lineHeight: 1,
 });
 
-const ContactName = styled.h2({
+export const ContactName = styled.h2({
     fontSize: '1.5em',
     fontWeight: '600',
     margin: 0,
 });
 
-const ContactActions = styled.div({
+export const ContactActions = styled.div({
     gridArea: 'action',
     display: 'grid',
     gap: css.spacing(0.7),
 });
 
-const ContactDescription = styled.div({
+export const ContactDescription = styled.div({
     color: `var(${css.variables.text.secondary})`,
     lineHeight: '1.8',
     gridArea: 'desc',
     padding: `0 ${css.spacing(1)}`,
     marginBottom: '1em',
 });
-
-export interface ContactCardProps {
-    fullName: string;
-    email: string;
-    title: string;
-    cellphoneNumber?: string;
-    description: string[];
-}
-
-export function ContactCard(args: ContactCardProps) {
-    return (
-        <ContactRoot>
-            <ContactIcon>
-                <PersonIcon />
-            </ContactIcon>
-
-            <ContactAbout>
-                <ContactName>{args.fullName}</ContactName>
-                <ContactTitle>{args.title}</ContactTitle>
-            </ContactAbout>
-
-            <ContactDescription>
-                {args.description.map((line) => (
-                    <div key={line}>{line}</div>
-                ))}
-            </ContactDescription>
-
-            <ContactActions>
-                {args.cellphoneNumber ? (
-                    <ContactPhoneCall
-                        href={`tel:${args.cellphoneNumber}`}
-                        aria-label={`Phone call with ${args.fullName}`}
-                    >
-                        <PhoneIcon />
-                        <span>Call</span>
-                    </ContactPhoneCall>
-                ) : undefined}
-
-                <ContactEmail
-                    href={`mailto:${args.email}`}
-                    aria-label={`Email conversation with ${args.fullName} at ${args.email}`}
-                >
-                    <EmailIcon />
-                    <span>Email</span>
-                </ContactEmail>
-            </ContactActions>
-        </ContactRoot>
-    );
-}

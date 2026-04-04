@@ -21,25 +21,13 @@ const CallToAction = styled.a({
 });
 
 export const ContactPhoneCall = styled(CallToAction)({
-    borderColor: '#db8f00',
-    color: '#db8f00',
-    fill: '#db8f00',
-
-    '&:hover': {
-        backgroundColor: '#db8f00',
-        color: '#fff',
-        fill: '#fff',
-    },
+    backgroundColor: '#1b9d07',
+    color: '#fff',
+    fill: '#fff',
 });
 
 export const ContactEmail = styled(CallToAction)({
-    borderColor: '#0094ff',
-    color: '#0094ff',
-    fill: '#0094ff',
-
-    '&:hover': {
-        backgroundColor: '#0094ff',
-        color: '#fff',
-        fill: '#fff',
-    },
+    backgroundColor: '#0068b3',
+    color: '#fff',
+    fill: '#fff',
 });

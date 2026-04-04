@@ -37,11 +37,6 @@ const ContactContainer = styled(BaseContainer)({
     },
 });
 
-const LocationContainer = styled(BaseContainer)({
-    height: '50vmax',
-    width: '100%',
-});
-
 export function App() {
     return (
         <>
@@ -89,11 +84,9 @@ export function App() {
                         </ContactEmail>
                     </ContactActions>
                 </ContactCard>
-            </ContactContainer>
 
-            <LocationContainer>
                 <Location />
-            </LocationContainer>
+            </ContactContainer>
         </>
     );
 }

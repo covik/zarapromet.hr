@@ -1,0 +1,42 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Log in to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push production image
+        id: build_push
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          target: production
+          push: true
+          tags: |
+            ghcr.io/${{ github.repository }}:latest
+
+      - name: Publish image summary
+        run: |
+          echo "## Published image" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Tag: ghcr.io/${{ github.repository }}:latest" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Digest: ${{ steps.build_push.outputs.digest }}" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Reference: ghcr.io/${{ github.repository }}@${{ steps.build_push.outputs.digest }}" >> "$GITHUB_STEP_SUMMARY"

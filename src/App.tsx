@@ -5,10 +5,11 @@ import { Header } from './Header';
 import { Location } from './Location';
 import { Services } from './services';
 import * as css from './css';
-import { ContactEmail, ContactPhoneCall } from './contact/CallToAction';
+import { AddToContacts, ContactEmail, ContactPhoneCall } from './contact/CallToAction';
 import { PhoneIcon } from './contact/icons/PhoneIcon';
 import { EmailIcon } from './contact/icons/EmailIcon';
 import anteNakicFaceUrl from './assets/ante-nakic.png';
+import { SaveContactIcon } from './contact/icons/SaveContactIcon';
 
 const BaseContainer = styled.section({
     maxWidth: '1280px',
@@ -82,6 +83,14 @@ export function App() {
                             <EmailIcon />
                             <span>Email</span>
                         </ContactEmail>
+
+                        <AddToContacts
+                            href={`/ante-nakic.vcf`}
+                            aria-label={`Add Ante Nakić to contacts`}
+                        >
+                            <SaveContactIcon />
+                            <span>Add to contacts</span>
+                        </AddToContacts>
                     </ContactActions>
                 </ContactCard>
 

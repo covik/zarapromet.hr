@@ -29,3 +29,10 @@ export const ContactEmail = styled(CallToAction)({
     color: '#fff',
     fill: '#fff',
 });
+
+export const AddToContacts = styled(CallToAction)({
+    backgroundColor: '#795548',
+    color: '#fff',
+    fill: '#fff',
+    gridColumn: 'span 2',
+});
